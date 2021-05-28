@@ -116,7 +116,7 @@ dateTo | long | NO | 取得終了日時
       "open": 6883783.0,
       "high": 6885002.0,
       "low": 6882987.0,
-      "close": 6883923.0,,
+      "close": 6883923.0,
       "volume": 94.713,
       "time": 1618546680000
     },
@@ -186,7 +186,7 @@ symbolId | long | YES | symbolId
       "tradedAt": 1618449345751
     },
     ...
-  ]
+  ],
   "timestamp": 1618577999520
 }
 ```
@@ -235,7 +235,7 @@ idTo | long | NO | 検索終了注文ID
 dateFrom | long | NO | 取得開始日時
 dateTo | long | NO | 取得終了日時
 orderStatus | string | NO | WAITING, UNFILLED, PARTIALLY_FILLED
-orderType | string | NO | MARKET, LIMIT
+orderType | string | NO | MARKET, LIMIT, STOP
 orderSide | string | NO | SELL, BUY
 number | int | NO | ページ番号。default: 0
 size | int | NO | 1ページに表示する件数。default: 30
@@ -303,7 +303,7 @@ POST /api/v1/spot/order
 Name | Type | Mandatory | Description
 --- | --- | --- | ---
 symbolId | long | YES | symbolId
-orderType | string | YES | MARKET, LIMIT
+orderType | string | YES | MARKET, LIMIT, STOP
 orderSide | string | YES | SELL, BUY
 price | decimal | NO | 注文価格。orderType=LIMITの時に指定する。
 amount | decimal | YES | 注文数量
@@ -372,7 +372,7 @@ idFrom | long | NO | 検索開始注文ID
 idTo | long | NO | 検索終了注文ID
 dateFrom | long | NO | 取得開始日時
 dateTo | long | NO | 取得終了日時
-orderType | string | NO | MARKET, LIMIT
+orderType | string | NO | MARKET, LIMIT, STOP
 orderSide | string | NO | SELL, BUY
 number | int | NO | ページ番号。default: 0
 size | int | NO | 1ページに表示する件数。default: 30
