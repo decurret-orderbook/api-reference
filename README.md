@@ -9,9 +9,10 @@ DeCurretではプログラムからの売買や分析にご利用いただける
 を発行していただく必要があります。
 
 ## APIのインターフェース仕様書
-[REST APIs](docs/rest-api.md)
+[REST API](docs/rest-api.md)
 
-## pythonライブラリ
+[エラーコード](docs/errorcode.md)
+## ライブラリ
 [Python](libs/pynex.py)
 
 
