@@ -50,13 +50,13 @@ class API(object):
                 if auth_header:
                     s.headers.update(auth_header)
                 if method == "GET":
-                    response = s.get(url, params=params, verify=False)
+                    response = s.get(url, params=params)
                 elif method == "POST":
                     response = s.post(url, data=json.dumps(params))
                 elif method == "PUT":
                     response = s.put(url, data=json.dumps(params))
                 else: # DELETE
-                    response = s.delete(url, params=params, verify=False)
+                    response = s.delete(url, params=params)
         except requests.RequestException as e:
             print("RequestException", e)
             raise e
@@ -131,7 +131,7 @@ class API(object):
         idTo	    long	NO	        検索終了注文ID
         dateFrom	long	NO	        取得開始日時
         dateTo	    long	NO	        取得終了日時
-        orderStatus	string	NO	        WAITING, UNFILLED,
+        orderStatus	string	NO
         """
         if not all([self.api_key, self.api_secret]):
             raise AuthException()
@@ -154,7 +154,7 @@ class API(object):
         """
         Name	    Type	Mandatory	Description
         symbolId	long	YES	        symbolId
-        orderType	string	YES	        MARKET, LIMIT
+        orderType	string	YES	        MARKET, LIMIT, STOP
         orderSide	string	YES	        SELL, BUY
         price	    decimal	NO	        注文価格。orderType=LIMITの時に指定する。
         amount	    decimal	YES	        注文数量
