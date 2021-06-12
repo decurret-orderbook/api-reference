@@ -274,23 +274,24 @@ symbolId | long | YES | symbolId
 #### response
 ```json
 [
-   {
-    "id": 123,
-    "symbolId": 1,
-    "userId": 123,
-    "orderSide": "BUY",
-    "orderType": "LIMIT",
-    "price": 6800000.0,
-    "averagePrice": 0,
-    "amount": 0.1,
-    "remainingAmount": 0.1,
-    "orderStatus": "UNFILLED",
-    "orderOperator": "USER",
-    "orderChannel": "PC_WEB",
-    "createdAt": 1618577044481,
-    "updatedAt": 1618577044481,
-  },
-  ...
+    {
+        "id": 123,
+        "createdAt": 1618577044481,
+        "updatedAt": 1618577044481,
+        "symbolId": 1,
+        "userId": 123,
+        "amount": 0.1,
+        "orderSide": "BUY",
+        "orderType": "LIMIT",
+        "orderChannel": "API_KEY",
+        "price": 6800000,
+        "averagePrice": 0,
+        "remainingAmount": 0.1,
+        "orderStatus": "UNFILLED",
+        "orderOperator": "USER",
+        "postOnly": true
+    },
+    ...
 ]
 ```
 
@@ -307,25 +308,26 @@ orderType | string | YES | MARKET, LIMIT, STOP
 orderSide | string | YES | SELL, BUY
 price | decimal | NO | 注文価格。orderType=LIMITの時に指定する。
 amount | decimal | YES | 注文数量
+postOnly | boolean | NO | Post Onlyかどうか（type = limit時のみ）
 #### response
 ```json
 {
-  "id": 123,
-  "symbolId": 1,
-  "userId": 123,
-  "orderSide": "BUY",
-  "orderType": "LIMIT",
-  "price": 6800000.0,
-  "averagePrice": 0,
-  "amount": 0.1,
-  "remainingAmount": 0.1,
-  "orderStatus": "UNFILLED",
-  "orderOperator": "USER",
-  "orderChannel": "API_KEY",
-  "createdAt": 1618577044481,
-  "updatedAt": 1618577044481,
+    "id": 123,
+    "createdAt": 1618577044481,
+    "updatedAt": 1618577044481,
+    "symbolId": 1,
+    "userId": 123,
+    "amount": 0.1,
+    "orderSide": "BUY",
+    "orderType": "LIMIT",
+    "orderChannel": "API_KEY",
+    "price": 6800000.0,
+    "averagePrice": 0,
+    "remainingAmount": 0.1,
+    "orderStatus": "UNFILLED",
+    "orderOperator": "USER",
+    "postOnly": true
 }
-
 ```
 
 ### delete spot order
@@ -341,20 +343,21 @@ id | long | YES | 注文id
 #### response
 ```json
 {
-  "id": 123,
-  "symbolId": 1,
-  "userId": 123,
-  "orderSide": "BUY",
-  "orderType": "LIMIT",
-  "price": 6800000.0,
-  "averagePrice": 0,
-  "amount": 0.1,
-  "remainingAmount": 0.1,
-  "orderStatus": "UNFILLED_CANCELED",
-  "orderOperator": "USER",
-  "orderChannel": "API_KEY",
-  "createdAt": 1618577044481,
-  "updatedAt": 1618577044481,
+    "id": 123,
+    "createdAt": 1618577044481,
+    "updatedAt": 1618577044481,
+    "symbolId": 1,
+    "userId": 123,
+    "amount": 0.1,
+    "orderSide": "BUY",
+    "orderType": "LIMIT",
+    "orderChannel": "API_KEY",
+    "price": 6800000.0,
+    "averagePrice": 0,
+    "remainingAmount": 0.1,
+    "orderStatus": "UNFILLED",
+    "orderOperator": "USER",
+    "postOnly": true
 }
 ```
 
