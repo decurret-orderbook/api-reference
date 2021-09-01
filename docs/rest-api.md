@@ -362,7 +362,7 @@ id | long | YES | 注文id
 ```
 
 ### get spot trade
-約定明細の取得
+約定明細の取得(48時間以内のデータのみ取得可能)
 ```
 GET /api/v1/spot/trade
 ```
@@ -370,9 +370,9 @@ GET /api/v1/spot/trade
 Name | Type | Mandatory | Description
 --- | --- | --- | ---
 symbolId | long | YES | symbolId
-id | long | NO | 注文ID
-idFrom | long | NO | 検索開始注文ID
-idTo | long | NO | 検索終了注文ID
+id | long | NO | 約定ID
+idFrom | long | NO | 検索開始約定ID
+idTo | long | NO | 検索終了約定ID
 dateFrom | long | NO | 取得開始日時
 dateTo | long | NO | 取得終了日時
 orderType | string | NO | MARKET, LIMIT, STOP
