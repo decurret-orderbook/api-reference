@@ -7,7 +7,7 @@ wss://api-trade.decurret.com/ws
 
 ### リクエストの仕様について
 一般的に利用される様々なwebsocketの接続方法をご利用いただけます。\
-websocket-client==1.31.22を用いたサンプルは以下の通りです。
+websocket==1.31.0を用いたサンプルは以下の通りです。
 
 
 ```python
