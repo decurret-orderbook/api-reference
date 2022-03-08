@@ -11,7 +11,12 @@ DeCurretではプログラムからの売買や分析にご利用いただける
 ## APIのインターフェース仕様書
 [REST API](docs/rest-api.md)
 
+[Websocket API](docs/ws-api.md)
+
 [エラーコード](docs/errorcode.md)
+
+
+
 ## ライブラリ
 [Python](libs/pynex.py)
 
