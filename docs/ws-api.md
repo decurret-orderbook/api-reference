@@ -71,7 +71,7 @@ if __name__ == '__main__':
 10|QTUM_JPY
 
 #### response
-```json
+```
 type TickerResponse = {
   symbolId: number,
   bestAsk: number,
@@ -105,7 +105,7 @@ type TickerResponse = {
 10|QTUM_JPY
 
 #### response
-```json
+```
 type TradeResponse = {
   symbolId: number,
   trades: Trade[],
@@ -140,7 +140,7 @@ type Trade = {
 10|QTUM_JPY
 
 #### response
-```json
+```
 type OrderbookMessage = {
   symbolId: number,
   asks: OrderMessage[],
