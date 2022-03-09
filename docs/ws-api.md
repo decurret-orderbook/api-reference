@@ -2,7 +2,7 @@
 
 
 ### 接続先URI（エンドポイント）
-wss://api-trade.decurret.com/ws
+wss://orderbook-api.dccx-prod.decurret.com/ws
 <br><br>
 
 ### リクエストの仕様について
@@ -19,11 +19,11 @@ def on_message(wsapp, message):
 
 
 def on_open(wsapp):
-    wsapp.send(json.dumps({"op": "subscribe", "args": ["trade"]}))
+    wsapp.send(json.dumps({"op": "subscribe", "args": ["ticker"]}))
 
 
 if __name__ == '__main__':
-    wsapp = websocket.WebSocketApp("wss://api-trade.decurret.com/ws",
+    wsapp = websocket.WebSocketApp("wss://orderbook-api.dccx-prod.decurret.com/ws",
                                    on_message=on_message,
                                    on_open=on_open)
     wsapp.run_forever()
